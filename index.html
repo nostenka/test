@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Кто ты из мультфильма "Головоломка"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen" class="container">
+        <h1>Тест: Кто ты из мультфильма "Головоломка"</h1>
+        <img src="images/start_image.webp" alt="Начало теста" class="start-image">
+        <p>Пройдите этот тест, чтобы узнать, какой персонаж из мультфильма "Головоломка" вам больше всего подходит. Ответьте на все вопросы, и в конце вы узнаете, кто вы на самом деле!</p>
+        <button onclick="startQuiz()">Начать тест</button>
+    </div>
+
+    <div id="quizScreen" class="container">
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Как ты справляешься с трудностями?</p>
+                <label><input type="radio" name="q1" value="Радость"> Всегда стараюсь оставаться позитивным</label><br>
+                <label><input type="radio" name="q1" value="Печаль"> Иногда мне бывает очень грустно</label><br>
+                <label><input type="radio" name="q1" value="Гнев"> Меня это очень злит</label><br>
+                <label><input type="radio" name="q1" value="Страх"> Я боюсь всего на свете</label><br>
+                <label><input type="radio" name="q1" value="Брезгливость"> Меня это просто отталкивает</label>
+            </div>
+            <div class="question">
+                <p>2. Какой твой любимый цвет?</p>
+                <label><input type="radio" name="q2" value="Радость"> Желтый</label><br>
+                <label><input type="radio" name="q2" value="Печаль"> Синий</label><br>
+                <label><input type="radio" name="q2" value="Гнев"> Красный</label><br>
+                <label><input type="radio" name="q2" value="Страх"> Фиолетовый</label><br>
+                <label><input type="radio" name="q2" value="Брезгливость"> Зеленый</label>
+            </div>
+            <div class="question">
+                <p>3. Что ты любишь делать в свободное время?</p>
+                <label><input type="radio" name="q3" value="Радость"> Веселиться с друзьями</label><br>
+                <label><input type="radio" name="q3" value="Печаль"> Слушать грустную музыку</label><br>
+                <label><input type="radio" name="q3" value="Гнев"> Играть в спортивные игры</label><br>
+                <label><input type="radio" name="q3" value="Страх"> Смотреть фильмы ужасов</label><br>
+                <label><input type="radio" name="q3" value="Брезгливость"> Посещать модные мероприятия</label>
+            </div>
+            <div class="question">
+                <p>4. Какое твое любимое время года?</p>
+                <label><input type="radio" name="q4" value="Радость"> Лето</label><br>
+                <label><input type="radio" name="q4" value="Печаль"> Осень</label><br>
+                <label><input type="radio" name="q4" value="Гнев"> Зима</label><br>
+                <label><input type="radio" name="q4" value="Страх"> Весна</label><br>
+                <label><input type="radio" name="q4" value="Брезгливость"> Я не люблю ни одно время года</label>
+            </div>
+            <div class="question">
+                <p>5. Какое блюдо тебе нравится больше всего?</p>
+                <label><input type="radio" name="q5" value="Радость"> Пицца</label><br>
+                <label><input type="radio" name="q5" value="Печаль"> Салат</label><br>
+                <label><input type="radio" name="q5" value="Гнев"> Стейк</label><br>
+                <label><input type="radio" name="q5" value="Страх"> Суп</label><br>
+                <label><input type="radio" name="q5" value="Брезгливость"> Суши</label>
+            </div>
+            <div class="question">
+                <p>6. Какой твой любимый жанр фильмов?</p>
+                <label><input type="radio" name="q6" value="Радость"> Комедия</label><br>
+                <label><input type="radio" name="q6" value="Печаль"> Драма</label><br>
+                <label><input type="radio" name="q6" value="Гнев"> Боевик</label><br>
+                <label><input type="radio" name="q6" value="Страх"> Ужасы</label><br>
+                <label><input type="radio" name="q6" value="Брезгливость"> Мелодрама</label>
+            </div>
+            <div class="question">
+                <p>7. Как ты обычно проводишь отпуск?</p>
+                <label><input type="radio" name="q7" value="Радость"> На пляже</label><br>
+                <label><input type="radio" name="q7" value="Печаль"> Дома</label><br>
+                <label><input type="radio" name="q7" value="Гнев"> В горах</label><br>
+                <label><input type="radio" name="q7" value="Страх"> В другой стране</label><br>
+                <label><input type="radio" name="q7" value="Брезгливость"> На экскурсиях</label>
+            </div>
+            <div class="question">
+                <p>8. Какую музыку ты предпочитаешь?</p>
+                <label><input type="radio" name="q8" value="Радость"> Поп</label><br>
+                <label><input type="radio" name="q8" value="Печаль"> Классическая</label><br>
+                <label><input type="radio" name="q8" value="Гнев"> Рок</label><br>
+                <label><input type="radio" name="q8" value="Страх"> Джаз</label><br>
+                <label><input type="radio" name="q8" value="Брезгливость"> Рэп</label>
+            </div>
+            <div class="question">
+                <p>9. Как ты реагируешь на критику?</p>
+                <label><input type="radio" name="q9" value="Радость"> Принимаю и учусь</label><br>
+                <label><input type="radio" name="q9" value="Печаль"> Очень расстраиваюсь</label><br>
+                <label><input type="radio" name="q9" value="Гнев"> Раздражаюсь</label><br>
+                <label><input type="radio" name="q9" value="Страх"> Стараюсь избегать</label><br>
+                <label><input type="radio" name="q9" value="Брезгливость"> Не обращаю внимания</label>
+            </div>
+            <div class="question">
+                <p>10. Какое твоё хобби?</p>
+                <label><input type="radio" name="q10" value="Радость"> Рисование</label><br>
+                <label><input type="radio" name="q10" value="Печаль"> Чтение</label><br>
+                <label><input type="radio" name="q10" value="Гнев"> Спорт</label><br>
+                <label><input type="radio" name="q10" value="Страх"> Путешествия</label><br>
+                <label><input type="radio" name="q10" value="Брезгливость"> Кулинария</label>
+            </div>
+            <div class="question">
+                <p>11. Как ты себя чувствуешь в большой компании?</p>
+                <label><input type="radio" name="q11" value="Радость"> Очень комфортно</label><br>
+                <label><input type="radio" name="q11" value="Печаль"> Немного неуютно</label><br>
+                <label><input type="radio" name="q11" value="Гнев"> Напрягаюсь</label><br>
+                <label><input type="radio" name="q11" value="Страх"> Стесняюсь</label><br>
+                <label><input type="radio" name="q11" value="Брезгливость"> Избегаю</label>
+            </div>
+            <div class="question">
+                <p>12. Как ты относишься к переменам?</p>
+                <label><input type="radio" name="q12" value="Радость"> Люблю перемены</label><br>
+                <label><input type="radio" name="q12" value="Печаль"> Мне сложно адаптироваться</label><br>
+                <label><input type="radio" name="q12" value="Гнев"> Меня это раздражает</label><br>
+                <label><input type="radio" name="q12" value="Страх"> Я боюсь перемен</label><br>
+                <label><input type="radio" name="q12" value="Брезгливость"> Я их избегаю</label>
+            </div>
+            <div class="question">
+                <p>13. Какое животное тебе нравится больше всего?</p>
+                <label><input type="radio" name="q13" value="Радость"> Собака</label><br>
+                <label><input type="radio" name="q13" value="Печаль"> Кошка</label><br>
+                <label><input type="radio" name="q13" value="Гнев"> Тигр</label><br>
+                <label><input type="radio" name="q13" value="Страх"> Птица</label><br>
+                <label><input type="radio" name="q13" value="Брезгливость"> Рыба</label>
+            </div>
+            <div class="question">
+                <p>14. Как ты реагируешь на стресс?</p>
+                <label><input type="radio" name="q14" value="Радость"> Стараюсь расслабиться</label><br>
+                <label><input type="radio" name="q14" value="Печаль"> Уход в себя</label><br>
+                <label><input type="radio" name="q14" value="Гнев"> Выражаю агрессию</label><br>
+                <label><input type="radio" name="q14" value="Страх"> Сильно переживаю</label><br>
+                <label><input type="radio" name="q14" value="Брезгливость"> Стараюсь избегать</label>
+            </div>
+            <div class="question">
+                <p>15. Как ты оцениваешь свою самооценку?</p>
+                <label><input type="radio" name="q15" value="Радость"> Высокая</label><br>
+                <label><input type="radio" name="q15" value="Печаль"> Низкая</label><br>
+                <label><input type="radio" name="q15" value="Гнев"> Средняя</label><br>
+                <label><input type="radio" name="q15" value="Страх"> Очень низкая</label><br>
+                <label><input type="radio" name="q15" value="Брезгливость"> Меня это не волнует</label>
+            </div>
+            <button type="button" onclick="calculateResult()">Узнать результат</button>
+        </form>
+    </div>
+
+    <div id="resultScreen" class="container">
+        <img id="resultImage" src="" alt="Результат" class="result-image">
+        <div id="result"></div>
+        <div id="resultDescription" class="result-description"></div>
+        <button onclick="restartQuiz()">Пройти тест снова</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

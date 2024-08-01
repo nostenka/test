@@ -11,6 +11,33 @@ body {
     overflow: hidden;
 }
 
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3e5f5; /* Легкий фиолетовый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; /* Светлый фон спиннера */
+    border-top: 16px solid #6a1b9a; /* Фиолетовая часть спиннера */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .container {
     background: #ffffff; /* Белый фон для контейнеров */
     padding: 20px;
@@ -25,7 +52,7 @@ body {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 2em; /* Размер заголовка адаптивен */
     margin-bottom: 20px;
     color: #6a1b9a; /* Цвет заголовка */
 }
@@ -36,7 +63,7 @@ h1 {
 }
 
 .question p {
-    font-size: 18px;
+    font-size: 1.2em; /* Адаптивный размер шрифта для вопросов */
     margin: 2px 0; /* Уменьшен интервал между вариантами ответа */
     color: #6a1b9a; /* Фиолетовый цвет текста вопросов */
     font-weight: bold; /* Жирный текст вопросов */
@@ -45,7 +72,7 @@ h1 {
 label {
     display: block;
     margin: 5px 0; /* Уменьшен интервал между вариантами ответа */
-    font-size: 16px;
+    font-size: 1em; /* Адаптивный размер шрифта для вариантов ответа */
 }
 
 button {
@@ -55,7 +82,7 @@ button {
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 1.2em; /* Адаптивный размер шрифта кнопок */
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -73,7 +100,7 @@ button:active {
 
 .result {
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 1.5em; /* Адаптивный размер шрифта для результата */
     color: #6a1b9a; /* Цвет текста результата */
 }
 
@@ -83,7 +110,7 @@ button:active {
 
 .result-description {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 1em; /* Адаптивный размер шрифта для описания результата */
     color: #333; /* Цвет описания результата */
 }
 
@@ -113,13 +140,28 @@ button:active {
     .container {
         width: 95%;
         max-width: 100%;
+        padding: 15px; /* Уменьшен отступы для меньших экранов */
     }
 
-    button {
-        width: 100%;
+    h1 {
+        font-size: 1.8em; /* Меньший размер заголовка для мобильных устройств */
     }
 
     .question p, label {
-        font-size: 14px;
+        font-size: 1em; /* Меньший размер шрифта для вопросов и вариантов ответа */
+    }
+
+    button {
+        width: 100%; /* Кнопки занимают всю ширину на мобильных устройствах */
+        font-size: 1em; /* Меньший размер шрифта кнопок */
+        padding: 10px; /* Меньшие отступы для кнопок */
+    }
+
+    .result {
+        font-size: 1.2em; /* Меньший размер шрифта результата */
+    }
+
+    .result-description {
+        font-size: 0.9em; /* Меньший размер шрифта для описания результата */
     }
 }

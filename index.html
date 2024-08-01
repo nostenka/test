@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <div id="startScreen" class="container">
         <h1>Тест: Кто ты из мультфильма "Головоломка"</h1>
         <img src="images/start_image.webp" alt="Начало теста" class="start-image">
@@ -136,7 +140,7 @@
                 <label><input type="radio" name="q15" value="Страх"> Очень низкая</label><br>
                 <label><input type="radio" name="q15" value="Брезгливость"> Меня это не волнует</label>
             </div>
-            <button type="button" onclick="calculateResult()">Узнать результат</button>
+            <button type="button" onclick="calculateResult()">Получить результат</button>
         </form>
     </div>
 
@@ -148,5 +152,12 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Скрыть прелоадер после загрузки страницы
+        window.addEventListener('load', () => {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('startScreen').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
